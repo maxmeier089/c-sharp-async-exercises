@@ -41,7 +41,7 @@ namespace Warehouse
             {
                 if (Products.Count > 0)
                 {
-                    int index = random.Next(Products.Count - 1);
+                    int index = random.Next(Products.Count);
                     Product product = Products.ElementAt(index);
                     Products.RemoveAt(index);
                     return product;

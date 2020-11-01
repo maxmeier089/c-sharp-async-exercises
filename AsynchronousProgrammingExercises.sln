@@ -5,13 +5,15 @@ VisualStudioVersion = 16.0.30621.155
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SharedData", "SharedData\SharedData.csproj", "{2D3450A3-3FD5-47B6-8E14-F834B59317B6}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SharedDataFixed", "SharedDataFixed\SharedDataFixed.csproj", "{576B4BB7-C669-4838-8418-6162523E93B6}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SharedDataFixed", "SharedDataFixed\SharedDataFixed.csproj", "{576B4BB7-C669-4838-8418-6162523E93B6}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BankAccounts", "BankAccounts\BankAccounts.csproj", "{A7B4A125-BA6F-41F0-A2B6-C2446268258C}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BankAccounts", "BankAccounts\BankAccounts.csproj", "{A7B4A125-BA6F-41F0-A2B6-C2446268258C}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GuessMyLuckyNumber", "GuessMyLuckyNumber\GuessMyLuckyNumber.csproj", "{3B0BF2DA-3940-4672-A4E6-C54AA6D3AE21}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "GuessMyLuckyNumber", "GuessMyLuckyNumber\GuessMyLuckyNumber.csproj", "{3B0BF2DA-3940-4672-A4E6-C54AA6D3AE21}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Warehouse", "Warehouse\Warehouse.csproj", "{8489E3CB-C2F8-4482-9B5E-7558385341FB}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Warehouse", "Warehouse\Warehouse.csproj", "{8489E3CB-C2F8-4482-9B5E-7558385341FB}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CSVReader", "CSVReader\CSVReader.csproj", "{645B7EAE-C3C0-4BC7-9730-A7127E248C4E}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -39,6 +41,10 @@ Global
 		{8489E3CB-C2F8-4482-9B5E-7558385341FB}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{8489E3CB-C2F8-4482-9B5E-7558385341FB}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{8489E3CB-C2F8-4482-9B5E-7558385341FB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{645B7EAE-C3C0-4BC7-9730-A7127E248C4E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{645B7EAE-C3C0-4BC7-9730-A7127E248C4E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{645B7EAE-C3C0-4BC7-9730-A7127E248C4E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{645B7EAE-C3C0-4BC7-9730-A7127E248C4E}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

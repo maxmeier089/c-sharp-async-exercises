@@ -35,7 +35,7 @@ namespace Warehouse
             {
                 if (Products.Count > 0)
                 {
-                    Products.RemoveAt(random.Next(Products.Count - 1));
+                    Products.RemoveAt(random.Next(Products.Count));
                 }
             }
         }
