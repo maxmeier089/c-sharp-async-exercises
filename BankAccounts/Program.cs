@@ -44,8 +44,8 @@ namespace BankAccounts
 
             for (int n = 0; n < 1000; n++)
             {
-                BankAccount a = bankAccounts[random.Next(bankAccounts.Count() - 1)];
-                BankAccount b = bankAccounts[random.Next(bankAccounts.Count() - 1)];
+                BankAccount a = bankAccounts[random.Next(bankAccounts.Count())];
+                BankAccount b = bankAccounts[random.Next(bankAccounts.Count())];
 
                 decimal amount = ((decimal)random.Next(10000)) / 100.0m;
 
