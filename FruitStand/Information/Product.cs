@@ -11,38 +11,35 @@ namespace FruitStand
 
         public async Task<List<FruitInformation>> GetInformation(List<int> fruitIDs)
         {
-            return await Task.Run(async () =>
+            // create result list
+            List<FruitInformation> result = new List<FruitInformation>();
+
+            try
             {
-                // create result list
-                List<FruitInformation> result = new List<FruitInformation>();
+                // read CSV entries
+                CSVReader.CSVReader reader = new CSVReader.CSVReader();
 
-                try
+                List<CSVEntry> csvEntries = await reader.ReadFile("Fruit Product.CSV");
+
+                foreach (CSVEntry csvEntry in csvEntries)
                 {
-                    // read CSV entries
-                    CSVReader.CSVReader reader = new CSVReader.CSVReader();
+                    // parse ID
+                    int id = int.Parse(csvEntry.Entry[0]);
 
-                    List<CSVEntry> csvEntries = await reader.ReadFile("Fruit Product.CSV");
-
-                    foreach (CSVEntry csvEntry in csvEntries)
+                    // check if ID was requested
+                    if (fruitIDs.Contains(id))
                     {
-                        // parse ID
-                        int id = int.Parse(csvEntry.Entry[0]);
-
-                        // check if ID was requested
-                        if (fruitIDs.Contains(id))
-                        {
-                            // add information
-                            result.Add(new FruitInformation(id, csvEntry.Entry[1]));
-                        }
+                        // add information
+                        result.Add(new FruitInformation(id, csvEntry.Entry[1]));
                     }
                 }
-                catch (Exception ex)
-                {
-                    Console.WriteLine("Error getting fruit information");
-                }
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine("Error getting fruit information");
+            }
 
-                return result;
-            });
+            return result;
         }
 
     }

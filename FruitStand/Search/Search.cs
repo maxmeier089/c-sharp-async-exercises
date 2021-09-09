@@ -11,41 +11,38 @@ namespace FruitStand
 
         public async Task<List<FruitSearchResult>> SearchFruits(string name)
         {
-            return await Task.Run(async () =>
+            // create result list
+            List<FruitSearchResult> result = new List<FruitSearchResult>();
+
+            // convert name to lowercase
+            string nameLower = name.ToLower();
+
+            try
             {
-                // create result list
-                List<FruitSearchResult> result = new List<FruitSearchResult>();
+                // read CSV entries
+                CSVReader.CSVReader reader = new CSVReader.CSVReader();
 
-                // convert name to lowercase
-                string nameLower = name.ToLower();
+                List<CSVEntry> csvEntries = await reader.ReadFile("Fruits.CSV");
 
-                try
+                foreach (CSVEntry csvEntry in csvEntries)
                 {
-                    // read CSV entries
-                    CSVReader.CSVReader reader = new CSVReader.CSVReader();
+                    // get name
+                    string entryName = csvEntry.Entry[1];
 
-                    List<CSVEntry> csvEntries = await reader.ReadFile("Fruits.CSV");
-
-                    foreach (CSVEntry csvEntry in csvEntries)
+                    // check if name matches search
+                    if (entryName.ToLower().Contains(nameLower))
                     {
-                        // get name
-                        string entryName = csvEntry.Entry[1];
-
-                        // check if name matches search
-                        if (entryName.ToLower().Contains(nameLower))
-                        {
-                            // add result
-                            result.Add(new FruitSearchResult(int.Parse(csvEntry.Entry[0]), entryName));
-                        }
+                        // add result
+                        result.Add(new FruitSearchResult(int.Parse(csvEntry.Entry[0]), entryName));
                     }
                 }
-                catch (Exception ex)
-                {
-                    Console.WriteLine("Error searching for fruits");
-                }
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine("Error searching for fruits");
+            }
 
-                return result;
-            });    
+            return result;   
         }
 
     }
