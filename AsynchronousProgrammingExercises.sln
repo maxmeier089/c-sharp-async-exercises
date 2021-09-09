@@ -13,7 +13,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "GuessMyLuckyNumber", "Guess
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Warehouse", "Warehouse\Warehouse.csproj", "{8489E3CB-C2F8-4482-9B5E-7558385341FB}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CSVReader", "CSVReader\CSVReader.csproj", "{645B7EAE-C3C0-4BC7-9730-A7127E248C4E}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CSVReader", "CSVReader\CSVReader.csproj", "{645B7EAE-C3C0-4BC7-9730-A7127E248C4E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FruitStand", "FruitStand\FruitStand.csproj", "{161708E8-0678-4EE5-9FBC-CC656A80DEF1}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -45,6 +47,10 @@ Global
 		{645B7EAE-C3C0-4BC7-9730-A7127E248C4E}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{645B7EAE-C3C0-4BC7-9730-A7127E248C4E}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{645B7EAE-C3C0-4BC7-9730-A7127E248C4E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{161708E8-0678-4EE5-9FBC-CC656A80DEF1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{161708E8-0678-4EE5-9FBC-CC656A80DEF1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{161708E8-0678-4EE5-9FBC-CC656A80DEF1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{161708E8-0678-4EE5-9FBC-CC656A80DEF1}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
